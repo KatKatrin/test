@@ -13,6 +13,9 @@ broker.createService({
         console.log(`${SERVICE_NAME} call getRandom`)
 
         // Тут нужно дописать код
+        const result = await broker.call('randomizer.getNum', ctx.params)
+
+        return result
       },
     },
   },
